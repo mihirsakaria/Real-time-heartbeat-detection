@@ -1,5 +1,6 @@
-# Real time heartbeat detection
+# Average heartbeat detection
 
+For doit.py
 Detects heartbeat from the video of the face.
 Based on Eulerian Video Magnification
 
@@ -10,3 +11,12 @@ The code is for Eulerian Video magnification, specifically used for printing the
 
 The best region to check the output is the forehead region. Its where the intensity change is clearly visible. So it is the region of interest.
 The green band is observed to give best intensity changes. So the green band is extracted from the region of interest.
+
+The above approach gives us average heartrate over the entire interval of the video.
+
+# Real time heartrate and Spo2 level detection
+
+Eulerian Video magnification is helpful to one extent, but not a good method to find heartrate in real time
+The approach and be extended to calculate the frequency change of pixels for each second. As the fps speed is 30 this means that we can calculate the change in pixels for these 30 frames and thus that would be the heartrate for each second.
+Also using various correlation formulas it was found that the heart rate and blood oxygen levels are inversly correlated.
+So using that correlation we can determine the blood oxygen levels using the heartrates.
